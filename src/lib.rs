@@ -1,6 +1,8 @@
 use std::fs::read_to_string;
 use std::path::Path;
 
+
+/// Returns first n lines from the file at specified path. If path does not indicate a file, panics.
 pub fn head(path: &Path, n: usize) -> Vec<String> {
     read_to_string(path)
         .unwrap()
@@ -10,6 +12,7 @@ pub fn head(path: &Path, n: usize) -> Vec<String> {
         .collect()
 }
 
+/// Returns last n lines from the file at specified path. If path does not indicate a file, panics.
 pub fn tail(path: &Path, n: usize) -> Vec<String> {
     let all_strs: Vec<String> = read_to_string(path)
         .unwrap()
