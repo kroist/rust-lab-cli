@@ -1,6 +1,7 @@
 [package]
 name = "ju-tcs-rust-23-25"
-version = "0.1.1"
+crate-type = ["lib"]
+version = "0.1.2"
 edition = "2021"
 keywords = ["learning", "head", "tail"]
 categories = ["command-line-interface"]
