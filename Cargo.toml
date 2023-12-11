@@ -7,6 +7,10 @@ categories = ["command-line-interface"]
 license = "MIT"
 description = "Library providing head/tail functions implementation"
 repository = "https://github.com/kroist/rust-lab-cli"
+exclude = [
+    ".github/*",
+    "test/test1.txt",
+]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
