@@ -1,5 +1,5 @@
-use std::path::Path;
 use std::fs::read_to_string;
+use std::path::Path;
 
 pub fn head(path: &Path, n: usize) -> Vec<String> {
     read_to_string(path)
@@ -16,7 +16,8 @@ pub fn tail(path: &Path, n: usize) -> Vec<String> {
         .lines()
         .map(String::from)
         .collect();
-    all_strs.iter()
+    all_strs
+        .iter()
         .rev()
         .take(n)
         .map(String::from)
@@ -31,24 +32,14 @@ mod tests {
     fn test_head_3_from_5() {
         assert_eq!(
             crate::head(Path::new("./test/test1.txt"), 3 as usize),
-            vec![
-                "abacaba",
-                "abac",
-                "hubabuba"
-            ]
+            vec!["abacaba", "abac", "hubabuba"]
         )
     }
     #[test]
     fn test_head_6_from_5() {
         assert_eq!(
             crate::head(Path::new("./test/test1.txt"), 6 as usize),
-            vec![
-                "abacaba",
-                "abac",
-                "hubabuba",
-                "bububa",
-                "lulalula",
-            ]
+            vec!["abacaba", "abac", "hubabuba", "bububa", "lulalula",]
         )
     }
 
@@ -56,24 +47,14 @@ mod tests {
     fn test_tail_3_from_5() {
         assert_eq!(
             crate::tail(Path::new("./test/test1.txt"), 3 as usize),
-            vec![
-                "hubabuba",
-                "bububa",
-                "lulalula",
-            ]
+            vec!["hubabuba", "bububa", "lulalula",]
         )
     }
     #[test]
     fn test_tail_6_from_5() {
         assert_eq!(
             crate::tail(Path::new("./test/test1.txt"), 6 as usize),
-            vec![
-                "abacaba",
-                "abac",
-                "hubabuba",
-                "bububa",
-                "lulalula",
-            ]
+            vec!["abacaba", "abac", "hubabuba", "bububa", "lulalula",]
         )
     }
 }
