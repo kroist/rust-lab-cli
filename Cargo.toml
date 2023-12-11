@@ -1,7 +1,12 @@
 [package]
-name = "example"
+name = "ju-tcs-rust-23-25"
 version = "0.1.0"
 edition = "2021"
+keywords = ["learning", "head", "tail"]
+categories = ["command-line-interface"]
+license = "MIT"
+description = "Library providing head/tail functions implementation"
+repository = "https://github.com/kroist/rust-lab-cli"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
