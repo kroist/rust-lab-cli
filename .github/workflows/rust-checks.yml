@@ -30,6 +30,14 @@ jobs:
       - name: Run format checks
         shell: bash
         run: cargo fmt --all --check
+      
+      - name: Run linter
+        shell: bash
+        run: cargo clippy
+
+      - name: Run tests
+        shell: bash
+        run: cargo test
 
 # You can also use dedicated actions:
 # - https://github.com/actions-rs (popular, but abandoned recently)
